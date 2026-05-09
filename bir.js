@@ -1,7 +1,7 @@
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modalImg");
 const closeBtn = document.getElementById("close");
-
+const body = document.body;
 const images = document.querySelectorAll(".img");
 
 images.forEach(img => {

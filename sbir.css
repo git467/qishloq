@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url("./rasimlar/orqa\ fon.jpg") no-repeat center/cover;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  margin: 20px 0;
+}
+
+/* GRID */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+/* CARD */
+.card {
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.img {
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/* INFO SECTION */
+.info-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  gap: 50px;
+}
+
+/* BOOK */
+.book {
+  position: relative;
+  width: 250px;
+  height: 350px;
+}
+
+.book-img {
+  position: absolute;
+  width: 100%;
+  border-radius: 15px;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.img1 { z-index: 3; }
+.img2 { left: 20px; top: 10px; z-index: 2; }
+.img3 { left: 40px; top: 20px; z-index: 1; }
+
+/* GLASS */
+.glass {
+  flex: 1;
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  position: relative;
+}
+
+/* 🔥 HOVER EFFECT */
+.book-img:hover {
+  transform: translate(350px, -20px) scale(1.3);
+  z-index: 10;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
+
+.modal img {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  max-height: 80%;
+  margin-top: 5%;
+}
+
+#close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
